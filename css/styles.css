@@ -256,7 +256,9 @@ img {
 }
 
 .hero-title {
-    font-size: 5.6rem;
+.hero-subtitle 
+    font-size: 3rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     color: var(--secondary);
 }

@@ -47,11 +47,18 @@
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <div class="logo">
-                    <a href="#" class="logo-link">
-                        <span class="logo-text">Praana Ventures</span>
-                    </a>
-                </div>
+                <div class="mobile-header-top"> <!-- New wrapper for logo and toggle -->
+                    <div class="logo">
+                        <a href="#" class="logo-link">
+                            <img src="images/Lockup_Praana_Stacked.png" alt="Praana Ventures Logo" class="logo-img" style="max-height: 100px;">
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div> <!-- End new wrapper -->
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
@@ -60,7 +67,8 @@
                         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <!-- Redundant toggle removed -->
+            </div>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -74,13 +82,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text reveal-element">
-                    <span class="hero-tagline">Boutique Investment Studio</span>
-                    <h1 class="hero-title">Planning Your <span class="highlight">Retirement</span>? Let Praana Ventures Secure Your <span class="highlight">Business's Future</span>.</h1>
-                    <p class="hero-description">For over 15 years, you've poured your heart and soul into building a successful business. Now, as you consider retirement, you want assurance that your legacy will be honored and your company will continue to thrive.</p>
+                      
+                    <h1 class="hero-title">Planning Your <span class="highlight">Retirement</span>?</h1>
+                    <p class="hero-description">You've poured your heart and soul into building a successful business. Now, as you consider retirement, you want assurance that your legacy will be honored and your company will continue to thrive.</p>
                     <p class="hero-description">At Praana Ventures, we specialize in acquiring established small businesses (15+ years) from retiring owners like you. We don't just buy companies; we partner with you to ensure a smooth, confidential transition. We value the foundation you've built and are committed to injecting new energy ("praana") and resources to carry your business forward, taking care of your employees and customers.</p>
                     <div class="hero-buttons">
                         <a href="#approach" class="btn btn-primary">Our Approach</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                
+
                     </div>
                 </div>
                 <!-- Hero visual section removed as per user request -->
@@ -117,13 +126,7 @@
                 <h2 class="section-title">How We Honor Your Business Legacy</h2>
             </div>
             <div class="approach-cards reveal-element">
-                <div class="approach-card">
-                    <div class="approach-card-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 class="approach-card-title">Personalized Transition</h3>
-                    <p class="approach-card-description">We work directly with you to understand your business's unique value, culture, and potential. Our confidential process respects your timeline and priorities.</p>
-                </div>
+
                 <div class="approach-card">
                     <div class="approach-card-icon">
                         <i class="fas fa-balance-scale"></i>
@@ -159,42 +162,42 @@
             <div class="contact-content reveal-element">
                 <div class="contact-info">
                     <p class="contact-description">Let's have a conversation about how Praana Ventures can provide a fair valuation and a bright future for the business you've built. Our confidential, personalized approach ensures your legacy remains intact while positioning your company for its next chapter of growth.</p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+19084987999">Call/Text Us</a>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>New Jersey, United States</span>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/company/praana-ventures" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" >
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-bottom">
                 <div class="footer-logo">
-                    <span class="logo-text">Praana Ventures</span>
+                    <img src="images/Lockup_Praana_Stacked.png" alt="Praana Ventures Logo" class="logo-img" style="max-height: 160px;">
                     <p class="footer-tagline">Investing with Precision, Growing with Purpose, Innovating for Impact</p>
-                </div>
-                <div class="footer-links">
-                    <ul class="footer-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#approach">Approach</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                
+                <div class="footer-contact" style="display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center;"> <!-- Added inline style for basic layout -->
+                    <div class="contact-method" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-phone" style="color: white; opacity: 0.8;"></i>
+                        <a href="tel:+19084987999" style="color: white; opacity: 0.8; text-decoration: none;">Call/Text Us</a>
+                    </div>
+                    <div class="contact-method" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-map-marker-alt" style="color: white; opacity: 0.8;"></i>
+                        <span style="color: white; opacity: 0.8;">New Jersey, United States</span>
+                    </div>
+                    <div class="contact-method" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-linkedin" style="color: white; opacity: 0.8;"></i>
+                        <a href="https://linkedin.com/company/praana-ventures" target="_blank" rel="noopener noreferrer" style="color: white; opacity: 0.8; text-decoration: none;">LinkedIn</a>
+                    </div>
+                    <div class="contact-method" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-facebook" style="color: white; opacity: 0.8;"></i>
+                        <a href="https://www.facebook.com/profile.php?id=61574998157843" target="_blank" rel="noopener noreferrer" style="color: white; opacity: 0.8; text-decoration: none;">Facebook</a>
+                    </div>
                 </div>
             </div>
+
+        </div>
+
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2025 Praana Ventures LLC. All rights reserved.</p>
             </div>

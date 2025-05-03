@@ -1,13 +1,12 @@
 /* Variables */
 :root {
-    --primary: #4CAF50;
-    --primary-light: #A5D6A7;
-    --secondary: #333333;
-    --background: #FFFFFF;
-    --soft-gray: #F5F5F5;
-    --text-gray: #9E9E9E;
-    --accent-blue: #81D4FA;
-    --accent-yellow: #FFF59D;
+    --theme-color: #83a08d; /* Jade */
+    --button-color: #b2a177; /* Clay */
+    --background-color: #f2ede0; /* Canvas */
+    --text-color: #555555; /* Ink */
+    --footer-bg: #718294; /* Slate */
+    --secondary-text-color: #718294; /* Slate (for less prominent text) */
+    --accent-color: #b2a177; /* Clay (for accents) */
 }
 
 /* Base Styles */
@@ -26,8 +25,8 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--secondary);
-    background-color: var(--background);
+    color: var(--text-color);
+    background-color: var(--background-color);
     overflow-x: hidden;
 }
 
@@ -56,12 +55,12 @@ p {
 
 a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--theme-color);
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--primary-light);
+    color: var(--theme-color);
 }
 
 ul {
@@ -94,24 +93,24 @@ img {
     margin-bottom: 1.6rem;
 }
 
-.btn-primary {
-    background-color: var(--primary);
+.btn-primary { /* Ensure background-color is var(--button-color) */
+    background-color: var(--button-color); /* Clay */
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #3d9c40;
+    background-color: var(--theme-color); /* Jade hover */
     color: white;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: var(--theme-color);
+    border: 2px solid var(--theme-color);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary);
+    background-color: var(--theme-color);
     color: white;
 }
 
@@ -128,7 +127,7 @@ img {
 .section-subtitle {
     display: block;
     font-size: 1.8rem;
-    color: var(--primary);
+    color: var(--theme-color);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -136,16 +135,16 @@ img {
 
 .section-title {
     font-size: 3.6rem;
-    color: var(--secondary);
+    color: var(--text-color);
 }
 
 /* Header */
 .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     background-color: transparent;
     transition: background-color 0.3s ease;
     padding: 2rem 0;
@@ -166,7 +165,7 @@ img {
 .logo-text {
     font-size: 2.4rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--theme-color);
 }
 
 .nav-list {
@@ -180,12 +179,12 @@ img {
 .nav-link {
     font-size: 1.6rem;
     font-weight: 500;
-    color: var(--secondary);
+    color: var(--text-color);
     position: relative;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--primary);
+    color: var(--theme-color);
 }
 
 .nav-link::after {
@@ -195,7 +194,7 @@ img {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary);
+    background-color: var(--theme-color);
     transition: width 0.3s ease;
 }
 
@@ -217,7 +216,7 @@ img {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: var(--secondary);
+    background-color: var(--text-color);
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -234,7 +233,9 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: var(--soft-gray);
+    background-color: var(--background-color);
+    padding-top: 10px; /* Add enough top padding to avoid overlapping the logo/menu */
+
 }
 
 .hero-content {
@@ -252,25 +253,26 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     margin-bottom: 3rem;
-    color: var(--primary);
+    color: var(--theme-color);
 }
+
 
 .hero-title {
 .hero-subtitle 
     font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    color: var(--secondary);
+    color: var(--text-color);
 }
 
 .hero-title .highlight {
-    color: var(--primary);
+    color: var(--theme-color);
 }
 
 .hero-description {
     font-size: 1.8rem;
     margin-bottom: 3rem;
-    color: var(--text-gray);
+    color: var(--secondary-text-color);
 }
 
 .hero-buttons {
@@ -288,7 +290,7 @@ img {
 .hero-shape {
     width: 40rem;
     height: 40rem;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--theme-color) 0%, var(--theme-color) 100%);
     border-radius: 50%;
     opacity: 0.1;
     animation: float 6s ease-in-out infinite;
@@ -300,7 +302,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at top right, var(--primary-light) 0%, transparent 60%);
+    background: radial-gradient(circle at top right, var(--theme-color) 0%, transparent 60%);
     opacity: 0.1;
     z-index: -1;
 }
@@ -329,7 +331,7 @@ img {
 .about-shape {
     width: 30rem;
     height: 30rem;
-    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--theme-color) 100%);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     opacity: 0.1;
     animation: morph 8s ease-in-out infinite;
@@ -337,7 +339,7 @@ img {
 
 /* Approach Section */
 .approach {
-    background-color: var(--soft-gray);
+    background-color: var(--background-color);
 }
 
 .approach-cards {
@@ -367,8 +369,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-light);
-    color: var(--primary);
+    background-color: var(--theme-color);
+    color: var(--theme-color);
     border-radius: 50%;
     font-size: 3rem;
 }
@@ -378,7 +380,7 @@ img {
 }
 
 .approach-card-description {
-    color: var(--text-gray);
+    color: var(--secondary-text-color);
 }
 
 /* Portfolio Section */
@@ -399,7 +401,7 @@ img {
 
 .portfolio-placeholder-item {
     height: 20rem;
-    background-color: var(--soft-gray);
+    background-color: var(--background-color);
     border-radius: 1rem;
     transition: transform 0.3s ease;
 }
@@ -410,7 +412,7 @@ img {
 
 /* Contact Section */
 .contact {
-    background-color: var(--soft-gray);
+    background-color: var(--background-color);
 }
 
 .contact-content {
@@ -442,20 +444,25 @@ img {
 
 .contact-method i {
     font-size: 2rem;
-    color: var(--primary);
+    color: var(--theme-color);
 }
 
 /* Footer */
-.footer {
-    background-color: var(--secondary);
+.footer { /* Ensure background-color is var(--footer-bg) */
+    background-color: var(--footer-bg); /* Slate */
     color: white;
     padding: 6rem 0 2rem;
+    align-items: center;
+    text-align: center;
+
+
+
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
     margin-bottom: 4rem;
 }
 
@@ -475,13 +482,13 @@ img {
 
 .footer-nav a:hover {
     opacity: 1;
-    color: var(--primary-light);
+    color: var(--theme-color);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 0px solid rgba(255, 255, 255, 0.1);
 }
 
 .copyright {
@@ -489,37 +496,6 @@ img {
     opacity: 0.7;
 }
 
-/* Custom Cursor */
-.cursor-dot,
-.cursor-outline {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 9999;
-}
-
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--primary);
-}
-
-.cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--primary);
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, border 0.3s ease;
-}
-
-body:hover .cursor-dot,
-body:hover .cursor-outline {
-    opacity: 1;
-}
 
 /* Animations */
 @keyframes float {
@@ -567,7 +543,7 @@ body:hover .cursor-outline {
 /* Media Queries */
 @media (max-width: 992px) {
     html {
-        font-size: 60%;
+        font-size: 62.5%; /* Increased from 60% for readability */
     }
 
     .hero-content {
@@ -603,8 +579,34 @@ body:hover .cursor-outline {
 }
 
 @media (max-width: 768px) {
+    .header {
+        background-color: var(--background-color); /* Add background for mobile */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for mobile */
+        padding: 2rem 0; /* Increased header padding for mobile */
+    }
+
+    body {
+        padding-top: 8rem; /* Adjusted padding to prevent overlap with fixed mobile header */
+    }
+
+    .mobile-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Ensure it spans the container */
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none; /* Disable custom cursor on mobile */
+    }
+
     html {
-        font-size: 55%;
+        font-size: 72%; /* Further increased for readability again */
+    }
+
+    .hero {
+        /* padding-top: 14rem; */ /* Removed as body padding is used */
     }
 
     h1 {
